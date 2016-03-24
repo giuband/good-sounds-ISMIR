@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.3.8)  24 MAR 2016 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.3.8)  24 MAR 2016 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,6 +127,9 @@ Package color Info: Driver file: pdftex.def on input line 137.
 )
 (./ISMIR2016.aux
 
+LaTeX Warning: Label `fig:sound_list' multiply defined.
+
+
 LaTeX Warning: Label `my-label' multiply defined.
 
 )
@@ -239,6 +242,16 @@ Underfull \hbox (badness 4266) in paragraph at lines 35--35
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+<figs/sound_list.png, id=2, 1859.94875pt x 805.0075pt>
+File: figs/sound_list.png Graphic file (type png)
+
+<use figs/sound_list.png>
+Package pdftex.def Info: figs/sound_list.png used on input line 50.
+(pdftex.def)             Requested size: 233.31259pt x 100.96962pt.
+
+
+LaTeX Warning: Reference `fig:upload' on page 1 undefined on input line 56.
+
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -246,7 +259,13 @@ Missing character: There is no ô in font ptmr7t!
 
 
 
- <./figs/cc_by.pdf>]
+ <./figs/cc_by.pdf> <./figs/sound_list.png>] <figs/upload.png, id=19, 907.39pt 
+x 999.735pt>
+File: figs/upload.png Graphic file (type png)
+
+<use figs/upload.png>
+Package pdftex.def Info: figs/upload.png used on input line 62.
+(pdftex.def)             Requested size: 233.31259pt x 257.05708pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -254,55 +273,58 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Overfull \hbox (12.37764pt too wide) in paragraph at lines 65--71
+<figs/segmentation.png, id=20, 1127.21124pt x 849.1725pt>
+File: figs/segmentation.png Graphic file (type png)
+
+<use figs/segmentation.png>
+Package pdftex.def Info: figs/segmentation.png used on input line 76.
+(pdftex.def)             Requested size: 233.31259pt x 175.75298pt.
+
+Overfull \hbox (12.37764pt too wide) in paragraph at lines 86--92
  [][] 
  []
 
+[2 <./figs/upload.png> <./figs/segmentation.png>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
-[2]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
  [3]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 177.
+               Default added (so using `tbp') on input line 217.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 196.
-
-<figs/distribution_1.png, id=30, 578.16pt x 397.485pt>
+<figs/distribution_1.png, id=28, 578.16pt x 397.485pt>
 File: figs/distribution_1.png Graphic file (type png)
 
 <use figs/distribution_1.png>
-Package pdftex.def Info: figs/distribution_1.png used on input line 217.
+Package pdftex.def Info: figs/distribution_1.png used on input line 238.
 (pdftex.def)             Requested size: 233.31259pt x 160.39828pt.
 
-<figs/distribution_2.png, id=32, 578.16pt x 397.485pt>
+<figs/distribution_2.png, id=30, 578.16pt x 397.485pt>
 File: figs/distribution_2.png Graphic file (type png)
 
 <use figs/distribution_2.png>
-Package pdftex.def Info: figs/distribution_2.png used on input line 226.
+Package pdftex.def Info: figs/distribution_2.png used on input line 247.
 (pdftex.def)             Requested size: 233.31259pt x 160.39828pt.
-
-<figs/scores.png, id=33, 712.6625pt x 424.58624pt>
+ [4]
+<figs/scores.png, id=39, 712.6625pt x 424.58624pt>
 File: figs/scores.png Graphic file (type png)
  <use figs/scores.png>
-Package pdftex.def Info: figs/scores.png used on input line 236.
+Package pdftex.def Info: figs/scores.png used on input line 257.
 (pdftex.def)             Requested size: 233.31259pt x 138.99956pt.
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 248.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 269.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 248.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 269.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -315,26 +337,30 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
- [4 <./figs/distribution_1.png> <./figs/distribution_2.png>]
+
+Underfull \vbox (badness 6792) has occurred while \output is active []
+
+ [5 <./figs/distribution_1.png> <./figs/distribution_2.png> <./figs/scores.png>
+]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
- [5 <./figs/scores.png>]
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
- [6
-
-]
+ [6]
 (./ISMIR2016.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2415 strings out of 494977
- 32213 string characters out of 6180184
- 101812 words of memory out of 5000000
- 5588 multiletter control sequences out of 15000+600000
+ 2433 strings out of 494977
+ 32576 string characters out of 6180184
+ 99828 words of memory out of 5000000
+ 5603 multiletter control sequences out of 15000+600000
  26539 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,15n,23p,1568b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -350,10 +376,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on ISMIR2016.pdf (6 pages, 216050 bytes).
+Output written on ISMIR2016.pdf (6 pages, 475783 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
