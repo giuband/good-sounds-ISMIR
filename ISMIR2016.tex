@@ -18,18 +18,18 @@
 \title{Good-sounds.org: a framework to explore goodness in instrumental sounds}
 
 % ------------
-%\multauthor
-%{Giuseppe Bandiera$^1$ \hspace{1cm} Oriol Romani Picas$^1$ \hspace{1cm} Hiroshi Tokuda$^2$} { \bfseries{Wataru Hariya$^2$ \hspace{1cm} Koji Oishi$^2$ \hspace{1cm} Xavier Serra$^1$}\\
-%  $^1$ Music Technology Group, Universitat Pompeu Fabra, Barcelona, Spain\\
-%$^2$ Technology Development Dept., KORG Inc., Tokyo, Japan\\
-%{\tt\small giuseppe.bandiera@upf.edu, oriol.romani@upf.edu}
-%}
-%\def\authorname{Giuseppe Bandiera, Oriol Romani Picas, Hiroshi Tokuda, Wataru Hariya, Koji Oishi, Xavier Serra}
+\multauthor
+{Giuseppe Bandiera$^1$ \hspace{1cm} Oriol Romani Picas$^1$ \hspace{1cm} Hiroshi Tokuda$^2$} { \bfseries{Wataru Hariya$^2$ \hspace{1cm} Koji Oishi$^2$ \hspace{1cm} Xavier Serra$^1$}\\
+  $^1$ Music Technology Group, Universitat Pompeu Fabra, Barcelona, Spain\\
+$^2$ Technology Development Dept., KORG Inc., Tokyo, Japan\\
+{\tt\small giuseppe.bandiera@upf.edu, oriol.romani@upf.edu}
+}
+\def\authorname{Giuseppe Bandiera, Oriol Romani Picas, Hiroshi Tokuda, Wataru Hariya, Koji Oishi, Xavier Serra}
 
-\threeauthors
-  {First Author} {Affiliation1 \\ {\tt author1@ismir.edu}}
-  {Second Author} {\bf Retain these fake authors in\\\bf submission to preserve the formatting}
-  {Third Author} {Affiliation3 \\ {\tt author3@ismir.edu}}
+%\threeauthors
+%  {First Author} {Affiliation1 \\ {\tt author1@ismir.edu}}
+%  {Second Author} {\bf Retain these fake authors in\\\bf submission to preserve the formatting}
+%  {Third Author} {Affiliation3 \\ {\tt author3@ismir.edu}}
 
 
 \sloppy % please retain sloppy command for improved formatting
@@ -40,15 +40,15 @@
 \maketitle
 %
 \begin{abstract}
-We introduce good-sounds.org, a community driven framework to explore the concept of goodness in instrumental sounds. Musicians upload their sounds and vote on existing sounds, and from the collected data the system is able to develop sound goodness measures of relevance for music education applications. The core of the system is a database of sounds, together with audio features extracted from them and user annotations related to the goodness of the sounds. The web front-end provides useful data visualisations of the sound attributes and tools to facilitate user interaction. To evaluate the framework we carried out an experiment to rate sound goodness of single notes of nine  instruments. Users rated the sounds using an AB vote over a set of sound attributes defined to be of relevance in the characterization of single notes of instrumental sounds. With the obtained votes we built a ranking of the sounds for each attribute and developed a model that rates the goodness for each of the selected sound attributes. Using this approach we have succeeded in obtaining results comparable to a model that was built from expert generated evaluations.
+We introduce good-sounds.org, a community driven framework to explore the concept of goodness in instrumental sounds. Goodness is considered here as the common agreed basic sound quality of an instrument without taking into consideration musical expressiveness. Musicians upload their sounds and vote on existing sounds, and from the collected data the system is able to develop sound goodness measures of relevance for music education applications. The core of the system is a database of sounds, together with audio features extracted from them and user annotations related to the goodness of the sounds. The web front-end provides useful data visualizations of the sound attributes and tools to facilitate user interaction. To evaluate the framework, we carried out an experiment to rate sound goodness of single notes of nine orchestral instruments. In it, users rated the sounds using an AB vote over a set of sound attributes defined to be of relevance in the characterization of single notes of instrumental sounds. With the obtained votes we built a ranking of the sounds for each attribute and developed a model that rates the goodness for each of the selected sound attributes. Using this approach, we have succeeded in obtaining results comparable to a model that was built from expert generated evaluations.
 \end{abstract}
 %
 \section{Introduction}\label{sec:introduction}
 
-Measuring sound goodness, or quality, in instrumental sounds is difficult due to its intrinsic subjectivity. Nevertheless, it has been shown that there is some consistency among people while discriminating good or bad music performances \cite{1}. Furthermore, recent studies have demonstrated a correlation between the perceived music quality and the musical performance technique \cite{2}. Bearing this in mind, in a previous work \cite{01} we proposed a method to automatically rate goodness by defining a set of sound attributes and by using a set of good/bad labels given by expert musicians. The definition of goodness was treated as a classification problem and an outcome of that work was a mobile application (Cortosia) that gives goodness scores in real-time for single notes on a scale from 0 to 100. This score was computed considering the distribution of the features values in the classification step. While developing that system we realised that we could improve the scores, specially their correlation with the perceptual sound goodness, if we could use more training data and include a range of goodness levels given by users rather than the binary good/bad labels that we used. However, the task of labeling sounds this way would have been very time consuming and we would  also need more sounds, covering the whole range of sound goodness. To address these issues we are now crowsourcing the problem. We have developed a website, good-sounds.org, on which users can upload sound content and can tag sounds in various ways.      
+Measuring sound goodness, or quality, in instrumental sounds is difficult due to its intrinsic subjectivity. Ne\-ver\-theless, it has been shown that there is some consistency among people while discriminating good or bad music performances \cite{1}. Furthermore, recent studies have demonstrated a correlation between the perceived music quality and the musical performance technique \cite{2}. Bearing this in mind, in a previous work \cite{01} we proposed a method to automatically rate goodness by defining a set of sound attributes and by using a set of good/bad labels given by expert musicians. The definition of goodness was treated as a classification problem and an outcome of that work was a mobile application (Cortosia) that gives goodness scores in real-time for single notes on a scale from 0 to 100. This score was computed considering the distribution of the features values in the classification step. While developing that system we realized that we could improve the scores, specially their correlation with the perceptual sound goodness, if we could use more training data and include a range of goodness levels given by users rather than the binary good/bad labels that we used. However, the task of labeling sounds this way would have been very time consuming and we would  also need more sounds, covering the whole range of sound goodness. To address these issues we are now crowdsourcing the problem. We have developed a website, good-sounds.org, on which users can upload sound content and can tag and rate sounds in various ways.      
 %
 \section{good-sounds.org}\label{sec:goodsounds}
-Good-sounds.org\footnote{\textit{https://good-sounds.org/}} is a web platform to explore the concept of goodness in instrumental sounds with the help of a community of users. The website provides social community features in the front-end and a framework for sound analysis and modeling in the background. It also includes an API to access the collected data.
+Good-sounds.org\footnote{\textit{https://good-sounds.org}} is an online platform to explore the concept of goodness in instrumental sounds with the help of a community of users. It provides social community features in the web front-end and a framework for sound analysis and modeling in the background. It also includes an API to access the collected data.
 
 \begin{figure}[ht]
  \centerline{\framebox{
@@ -58,23 +58,22 @@ Good-sounds.org\footnote{\textit{https://good-sounds.org/}} is a web platform to
 \end{figure}
 
 \subsection{Description} 
-The website has been designed from a user perspective, meant to be modern and to provide a seamless experience. It makes use of state of the art designing concepts and community oriented web technologies. The front-end includes three main sections: (1) a visualisation page for the uploaded sounds as shown in Figure~\ref{fig:sound_list}, (2) a page to  upload and describe sounds as shown in Figure~\ref{fig:upload} and (3) a section to gather user annotations. The visualisation page shows a list of all the sounds and it includes filter options to be able to show things like specific instruments or sounds uploaded a certain date. The upload page allows users to add sounds into the site and also provides a recording tool built using Web Audio API\footnote{\textit{http://www.w3.org/TR/webaudio/}}. The annotation section has been designed for the specific experiment explained in Section~\ref{experiment}. 
-The website backend is written in Python using the Django web application framework. The metadata is stored in a PostgreSQL database while the files are stored locally in the server. An API accepts requests from authorized clients to upload sounds (currently through the mobile app Cortosia) and retrieve statistics from the user’s community. 
-At this time, the website supports 11 instruments, it includes 8470 unique sounds and there are 363 active users. 
+The website has been designed from a user perspective, meant to be modern and to provide a seamless experience. It makes use of state of the art design concepts and community oriented web technologies. The web front-end includes three main sections: (1) a page to list and visua\-lize the uploaded sounds as shown in Figure~\ref{fig:sound_list}, (2) a page to upload and describe sounds as shown in Figure~\ref{fig:upload} and (3) a section to gather user ratings and annotations. The visualization page shows a list of all the sounds and it includes filter options to narrow down the results, being able to show things like specific instruments or sounds uploaded a certain date. The upload page allows users to add sounds into the site and also provides a recording tool built using Web Audio API\footnote{\textit{http://www.w3.org/TR/webaudio/}}. The annotation section has been designed for the specific experiment explained in Section~\ref{experiment}. 
+The website backend is written in Python using the Django web application framework. The metadata is stored in a PostgreSQL database while the sound files plus other analysis files are stored locally in the server. An API accepts requests from authorized clients to upload sounds (currently through the mobile app Cortosia) and retrieve statistics from the user’s community. At this time, the website supports 11 instruments, it includes 8470 unique sounds and there are 363 active users. 
 
 \begin{figure}
  \centerline{\framebox{
  \includegraphics[width=\columnwidth]{figs/upload.png}}}
- \caption{Good-sound.org upload page.}
+ \caption{Good-sound.org sound upload page.}
  \label{fig:upload}
 \end{figure}
 
 \subsection{Content}
-The main data stored in good-sounds.org consists of sounds and the metadata accompaning them. When uploading sounds the users can choose between three different types of Creative Commons licenses for their content: Universal, Attribution or Attribution Non-Commercial. As soon as a sound is uploaded, it is analyzed using the freesound extractor \cite{02}, thus obtaining a number of low-level audio features, and the system generates an mp3 version of the file together with images of the waveform and spectrogram. The audio, image and audio feature files are stored in the good-sounds server and the metadata is stored in the PostgreSQL database. 
+The main data stored in good-sounds.org consists of sounds and the metadata accompanying them. When uploading sounds, the users can choose between three different types of Creative Commons licenses for their content: Universal, Attribution or Attribution Non-Commercial. As soon as a sound is uploaded, it is analyzed using the freesound extractor \cite{02}, thus obtaining a number of low-level audio features, and the system generates an mp3 version of the file together with images of the waveform and spectrogram. The audio, image and audio feature files are stored in the good-sounds server and the metadata is stored in the PostgreSQL database. 
 
 \subsubsection{Segmentation}
-One of the critical audio processing steps performed in good-sounds.org is the segmentation of the uploaded audio files to find appropiate note boundaries. Given that the audios come from different and not well controlled sources, they might include all kinds of issues (ex. silence at begining and end or background noise) that can difficult the subsequent feature extraction steps. Considering that the sounds we are working with are all monophonic pitched instrument sounds, we can base the segmentation mainly on pitch. Our approach extracts pitch using Essentia’s \cite{03} implementations of the YinFFT algorithm \cite{04} and the Yin time based algorithm \cite{05}. Then the sound is segmented into notes using pitch contours \cite{06} and signal RMS with Essentia’s PitchContourSegmentation algorithm.  
-The segmentation data is also stored in the database. This allows us to build client-side data visualizations that effectively reflect the quality of the segmentation algorithm and the user can modify the parameters for this algorithm and re-run it on the fly from the website. The results of this iteration is immediately shown on the same page, for an easy comparison of the results, as it is shown in Figure~\ref{fig:segmentation}.
+One of the critical audio processing steps performed in good-sounds.org is the segmentation of the uploaded sound files to find appropriate note boundaries. Given that the audios come from different and not well controlled sources, they might include all kinds of issues (ex. silence at beginning and end or background noise) that can difficult the subsequent feature extraction steps. Considering that the sounds we are working with are all monophonic pitched instrument sounds, we can base the segmentation mainly on pitch. Our approach extracts pitch using Essentia’s \cite{03} implementations of the YinFFT algorithm \cite{07} and the Yin time based algorithm \cite{05}. Then the sound is segmented into notes using pitch contours \cite{06} and signal RMS with Essentia’s PitchContourSegmentation algorithm.  
+The segmentation data is also stored in the database. This allows us to build client-side data visualizations that effectively reflect the quality of the segmentation algorithm and the user can modify the parameters for this algorithm and re-run it on the fly from the website. The results of this ite\-ration is immediately shown on the same page, for an easy comparison of the results, as it is shown in Figure~\ref{fig:segmentation}.
 
 \begin{figure}[ht]
  \centerline{\framebox{
@@ -84,7 +83,7 @@ The segmentation data is also stored in the database. This allows us to build cl
 \end{figure}
 
 \subsubsection{Descriptors}
-The feature extraction module computes spectral, tonal and temporal descriptors. The audios are first resampled to 44.1kHz sampling rate and normalised using ReplayGain\footnote{\textit{http://wiki.hydrogenaud.io/index.php?title=ReplayGain}}. The descriptors are then extracted across all the frames using a 2048 window size and 512 hop window size. We then compute statistical measures (mean, median and standard deviation) of the descriptors which are the values stored as JSON files in the server. The list of the descriptors we extract is shown in Table~\ref{table:descriptors}. 
+The feature extraction module (using the freesound extractor of Essentia) computes spectral, tonal and temporal descriptors. With it, the audios are first resampled to 44.1kHz sampling rate and normalised using ReplayGain\footnote{\textit{http://wiki.hydrogenaud.io/index.php?title=ReplayGain}}. The descriptors are then extracted across all the frames using a 2048 window size and 512 hop window size. We then compute statistical measures (mean, median and standard deviation) of the descriptors which are the values stored as JSON files in the server. The list of the descriptors extracted is shown in Table~\ref{table:descriptors}. 
 
 \begin{table*}[ht]
 \centering
@@ -100,10 +99,10 @@ spectral                                                                        
 
 
 \section{Experiment} \label{experiment}
-As a test case to evaluate the usefulness of the good-sounds.org framework we setup an experiment to rate the goodness of single notes. The goal of the experiment was to build models from the uploaded sounds and the community annotations with which we can then automatically rate the sound goodness. We then compared the results of these models with the ones we obtained in our previous work using expert annotations.  
+As a test case to evaluate the usefulness of the good-sounds.org framework we setup an experiment to rate the goodness of single notes. The goal of the experiment was to build models from both the uploaded sounds and the community annotations, with which we can then automatically rate the sound goodness. We compared the results of the obtained models with the ones we got in our previous work using expert annotations.  
 
 \subsection{Dataset}
-The data used in this experiment comes from several sources. First, we uploaded all the sounds from our previous work to the website, together with the expert annotations. Since the website has been public for a few months, we also had  sounds uploaded by users, both directly and through the mobile app (using the API). Then, user annotations on the sounds according to a goodness scale where collected using a voting task. These annotations use a set of sound attributes that affect sound goodness. These attributes were defined in our previous work \cite{01} by consulting with a group of music experts:   
+The data used in this experiment comes from several sources. First, we uploaded all the sounds from our previous work to the website, together with the expert annotations. Since the website has been public for a few months, we also had  sounds uploaded by users, both directly and through the mobile app (using the API). Then, user annotations on the sounds according to a goodness scale where collected using a voting task. These annotations use a set of sound attributes that affect sound goodness. These attributes were defined in our previous article \cite{01} by consulting with a group of music experts:   
 \begin{itemize}
 	\item{\textit{dynamic stability}: the stability of the loudness.}
 	\item{\textit{pitch stability}: the stability of the pitch.}
@@ -113,7 +112,7 @@ The data used in this experiment comes from several sources. First, we uploaded 
 \end{itemize}
 
 \subsubsection{Sounds}
-For this experiment we selected only the single note sounds. At the time of the experiment there were sounds for 5467 single notes of 9 instruments. We show the list of sounds per instrument in Table~\ref{sounds}. The sounds we recorded ourselves from the recording sessions are uncompressed wave files, while the ones uploaded by users to the website are in different audio formats.  
+For this experiment we only used single note sounds. At the time of the experiment there were sounds for 5467 single notes of 9 instruments. We show the list of sounds per instrument in Table~\ref{sounds}. The sounds we recorded ourselves from the recording sessions are uncompressed wave files, while the ones uploaded by users to the website are in different audio formats.  
 
 \begin{table}[ht]
 \centering
@@ -135,7 +134,7 @@ trumpet      & 738              \\ \hline
 \end{table}
 
 \subsubsection{Annotations}
-We distinguish two kinds of annotations: (1) recording annotations and (2) community annotations. The recording annotations are the ones coming from the recording sessions that we did and consists of one tag per sound. This tag says if the sound is a good or a bad example of each sound attribute (e.g. bad-timbre-stability, good-attack-clarity…). Those are the annotations used later on for a first evaluation of the models and are only available for the sounds we recorded ourselves.
+We distinguish two kinds of annotations: (1) recording annotations and (2) community annotations. The recor\-ding annotations are the ones coming from the recording sessions that we did and consists of one tag per sound. This tag says if the sound is a good or a bad example of each sound attribute (e.g. bad-timbre-stability, good-attack-clarity…). Those are the annotations used later on for a first evaluation of the models and are only available for the sounds we recorded ourselves.
 The community annotations are the ones generated from the user votes and used in this work to explore goodness. In order to be able to rate a sound in a goodness scale we need annotations on a wide range of different goodness levels. We originally thought of asking the community to rate sounds in a scale of goodness but we discarded this option because of the following:
 
 \begin{itemize}
@@ -182,7 +181,7 @@ The goal of our learning process is to build a model for each instrument that is
 Our approach uses a regression model to predict the score. These predictions are then used as samples of the final score function. The final score is then computed as an interpolation of the samples.
 
 \subsubsection{Models}
-We want to find the combination of regression model and set of features that better describes the rankings. For such a purpose we tried different regression algorithms available in scikit-learn \cite{08}.  For each one of the algorithms we build a model for each ranking using one, two or three features and we compute the average prediction score of the model across all the options. The prediction score $R^2$ is defined in the scikit-learn documentation as follows:
+We want to find the combination of regression model and set of features that better describes the rankings. For such a purpose we tried different regression algorithms available in scikit-learn \cite{08}.  As one of the outputs of the project is a system that rates the goodness of sounds in real-time we want to restrict the number of features in order to maintain a low computational cost. For each one of the algorithms we build a model for each ranking using one, two or three features and we compute the average prediction score of the model across all the options. The prediction score $R^2$  or Coefficient of Determination is defined as follows:
 
 \begin{equation}
  R^2 = (1 - u/v) 
@@ -229,11 +228,11 @@ SVR 3 features   & -1.208     & 5.4436         \\
 SVR 2 features   & -1.2411    & 5.3895         \\
 SVR 1 feature    & -1.4254    & 5.6554         \\ \hline
 \end{tabular}
-\caption{Performance of SVR model with differnet number of features.}
+\caption{Performance of SVR model with different number of features.}
 \label{svr}
 \end{table}
 
-The results show that the use of more than one feature dos not give significally better results so we decided to use SVR with a single feature. We then tried all possible combinations of parameters (kernel, degree of polinomiality, cost parameter..) to find the best model for each instrument and sound attribute.
+The results show that the differences between using one or three features are not too big so we decided to use SVR with a single feature  in order to maintain a low computational cost for future applications of the system. We then tried all possible combinations of parameters (kernel, degree of polynomially, cost parameter..) to find the best model for each instrument and sound attribute.
 
 \subsubsection{Scores}
 From the model we predict the ranking position of a sound and we map this position into a 0 to 100 score of the sound attribute. The final goodness score is computed as the average score across the five attributes. We compute the sound attribute scores of all the sounds in the database to test the distribution of the scores according to the feature value. For example, a distribution of the score for the timbre stability of flute is shown in Figure~\ref{fig:scores}.
@@ -255,60 +254,35 @@ The resulting distributions are not balanced. For this reason we push the scores
 \end{figure}
 
 \subsubsection{Models evaluation}
-In order to evaluate if the scores provided by the models fit the perceived goodness, we used the expert annotations of our previous work. These annotations only described if the sound is a good or a bad example of one of the sound attributes defined previously. A model for each sound attribute of each instrument is trained using the rankings described previously. These rankings are built with all the sounds from which we have votes (around 20\% of the sounds in the dataset). We use the models to compute the scores of all the sounds in the dataset and then we use the data visualisation tools implemented in the website to visualise the scores according to the expert annotations. An example of this using flute timbre stability is shown in Figure~\ref{fig:scores}. The visualisation tools read from database so just by training models the results are instantly shown in the web page. 
+In order to evaluate the models we want to check the correlation between the scores and the rankings as we expect the sounds ranked in the first positions to have the highest scores. We evaluate this correlation using Kendall Rank Correlation Coefficient \cite{09}, commonly referred as Kendall’s tau coefficient. 
+We use the implementation available in the scipy library, that is based on the tau-b version. Its computation, given two rankings $x$ and $y$ of the same size  is defined by the following equation:
+\begin{equation}
+\tau = \frac{(P - Q)} {\sqrt((P + Q + T)*(P + Q + U))}
+\end{equation}
+where $P$ is the number of concordant pairs, $Q$ the number of discordant pairs, $T$ the number of ties only in $x$, and $U$ the number of ties only in $y$. If a tie occurs for the same pair in both $x$ and $y$, it is not added to either $T$ or $U$.
+The values range from -1 to 1, where 1 indicates strong agreement and -1 strong disagreement. 
+We compute $\tau$ between the score and the ranking position for all the sounds that are contained in the rankings. 
+The results for each sound attribute and instrument are shown in Table 6.
 
-\begin{figure}
- \centerline{\framebox{
- \includegraphics[width=\columnwidth]{figs/scores_2.png}}}
- \caption{Visualisation of scores through the website tools.}
- \label{fig:scores_3}
-\end{figure}
 
-We expect the scores of good examples to be higher than 50 and the bad ones lower than 50. The number of sounds per sound attribute with scores above and below 50 according to their tags are shown in Table~\ref{results}.
-
-\begin{table}[ht]
+\begin{table*}[ht]
 \centering
-\begin{tabular}{lll}
-
-             & Dynamics stability     &                    \\ \hline
-sound tag    & score \textgreater= 50 & score \textless 50 \\ \hline
-good sound   & 1846                   & 872                \\
-bad dynamics & 438                    & 881                \\
-             &                        &                    \\
-
-             & Timbre stability       &                    \\ \hline
-sound tag    & score \textgreater= 50 & score \textless 50 \\ \hline
-good sound   & 930                    & 429                \\
-bad timbre   & 224                    & 472                \\
-             &                        &                    \\
-
-             & Pitch stability        &                    \\ \hline
-sound tag    & score \textgreater= 50 & score \textless 50 \\ \hline
-good sound   & 1260                   & 99                 \\
-bad pitch    & 125                    & 636                \\
-			 &                        &                    \\
-
-             & Timbre richness        &                    \\ \hline
-sound tag    & score \textgreater= 50 & score \textless 50 \\ \hline
-good sound   & 1184                   & 175                \\
-bad richness & 380                    & 268                \\
-             &                        &                    \\
-
-             & Attack clarity         &                    \\ \hline
-sound tag    & score \textgreater= 50 & score \textless 50 \\
-good sound   & 1005                   & 354                \\
-bad attack   & 553                    & 294                \\ \hline
+\begin{tabular}{lcccccccccc}
+\hline
+\textbf{Sound attribute} & \multicolumn{1}{l}{Flute} & \multicolumn{1}{l}{Violin} & \multicolumn{1}{l}{Clarinet} & \multicolumn{1}{l}{Trumpet} & \multicolumn{1}{l}{Cello} & \multicolumn{1}{l}{Violin} & \multicolumn{1}{l}{Alto sax} & \multicolumn{1}{l}{Baritone sax} & \multicolumn{1}{l}{Soprano} & \multicolumn{1}{l}{\textbf{Average}} \\ \hline
+timbre stability         & 0.37                      & 0.65                       & 0.46                         & 0.38                        & 0.28                      & 0.65                       & 0.33                         & 0.73                             & 0.73                        & \textbf{0.51}                        \\
+dynamic stability        & 0.41                      & 0.33                       & 0.24                         & 0.44                        & 0.64                      & 0.33                       & 0.33                         & 0.31                             & 0.31                        & \textbf{0.37}                        \\
+pitch stability          & 0.42                      & 0.46                       & 0.22                         & 0.38                        & 0.58                      & 0.46                       & 1                            & 1                                & 0.81                        & \textbf{0.59}                        \\
+timbre richness          & 0.04                      & 0.35                       & 0.32                         & 0.11                        & 0.21                      & 0.35                       & 1                            & 0.56                             & 1                           & \textbf{0.43}                        \\
+attack clarity           & 0.33                      & 0.59                       & 0.38                         & 0.3                         & 0.18                      & 0.59                       & 0                            & 0.34                             & 0.35                        & \textbf{0.34}                        \\ \hline
 \end{tabular}
-\caption{Number of sounds for each sound attribute with scores higher or lower than 50.}
-\label{results}
-\end{table}
-
-As we can see, the models seem to perform better in rating good sound examples. We can consider as correct predictions the sounds with “good sound” tag and score $>$~50 as well as the ones having “bad attribute” tag and score $<$~50. Thus there are 8778 correct predictions out of 12427. 
-As future work we want to also evaluate the models by using community annotations on scores.
+\label{tau}
+\caption{Kendall tau coefficient between the scores and the rankings of each sound attribute.}
+\end{table*}
 
 \section{Conclusions}
 In this article we presented a web based framework for exploring sound goodness in instrumental sounds using a community of users. The framework provides an easy way to collect sounds and annotations as well as tools to extract and store music descriptors. This allows us to explore the concept of sound goodness in a controlled and flexible environment. Furthermore, the website is useful to the community as a place in which to discuss the issues affecting sound goodness as well as a learning tool to improve their playing techniques. 
-As a way to evaluate the framework we extended the work presented in [1] by using annotations from the community collected through a voting task. The models built using this approach provide an automatic rating of goodness for each attribute that tends to match the expert annotations collected in our previous work. The results should improve with more annotations from the community.
+As a way to evaluate the framework we extended our previous work by using annotations from the community collected through a voting task. The models built using this approach provide an automatic rating of goodness for each attribute that tends to match the expert annotations collected in our previous work. The results should improve with more annotations from the community.
 As future work we want to design new tasks to collect user annotations and build new models according to them. 
 
 \section{Acknowledgements}
@@ -319,57 +293,55 @@ This research has been partially funded by KORG Inc. The authors would like to t
 
 % For non bibtex users:
 \begin{thebibliography}{citations}
-%
+
 \bibitem {1}
-J. Geringer and C. Madsen
-``Musicians ratings of good versus bad vocal and string performances''
-{\it Journal of Research in Music Education}, vol. 46, pages 522-34, 1998.
+J. Geringer and C. Madsen.
+``Musicians ratings of good versus bad vocal and string performances,''
+{\it Journal of Research in Music Education}, vol. 46, pages 522-534, 1998.
 
 \bibitem {2}
-Brian E. Russell
-``An empirical study of a solo performance assessment model''
+Brian E. Russell.
+``An empirical study of a solo performance assessment model,''
 {\it  International Journal of Music Education}, vol. 33, pages 359-371, 2015.
 
 \bibitem {01}
-%O. Romani Picas et al.
-%``A real-time system for measuring sound goodness in instrumental sounds,''
-%{\it AES 138th Convention Warsaw}, 2015.
-Anonymous due to blind review.
+O. Romaní Picas, H. Parra Rodriguez, D. Dabiri, H. Tokuda, W. Hariya, K. Oishi, and X. Serra.
+``A real-time system for measuring sound goodness in instrumental sounds,''
+{\it Audio Engineering Society Convention 138.} Audio Engineering Society 2015.
 
 \bibitem {02}
- F. Font, G. Roma, and X. Serra
+ F. Font, G. Roma, and X. Serra.
 ``Freesound technical demo,''
-{\it Proceedings of the 21st ACM international conference on Multimedia.}, 2013.
+{\it Proceedings of the 21st ACM international conference on Multimedia}, 2013.
 
 \bibitem {03}
- D. Bogdanov et al.
+ D. Bogdanov, N. Wach, E. G\'omez, S. Gulati, P. Herrera, O. Mayor, G. Roma, J. Salamon, J. R. Zapata, and X. Serra.
 ``Essentia: An audio analysis library for music information retrieval,''
-{\it  In Proceedings of the International Society for Music Information Retrieval Conference.}pages 493–498, 2013.
-
-\bibitem {04}
- P. M. Brossier
-``Automatic Annotation of Musical Audio for Interactive Applications''
-{\it QMUL, London, UK,}, 2007.
+{\it  Proceedings of the International Society for Music Information Retrieval Conference,} pages 493-498, 2013.
 
 \bibitem {05}
  A. de Cheveigné and H. Kawahara.
-``YIN, a fundamental frequency estimator for speech and music''
-{\it The Journal of the Acoustical Society of America}111:1917, 2002.
+``YIN, a fundamental frequency estimator for speech and music,''
+{\it The Journal of the Acoustical Society of America,} pages 111-1917, 2002.
 
 \bibitem {06}
- R. J. McNab et al.
-``Signal processing for melody transcription''
-{\it In Proceedings of the 19th Australasian Computer Science Conference}, 1996.
+ R. J. McNab, Ll. A. Smith, and I. H. Witten.
+``Signal processing for melody transcription,''
+{\it Australasian Computer Science Communications 18}, pages 301-307, 1996.
 
 \bibitem {07}
 P. M. Brossier.
-``Automatic Annotation of Musical Audio for Interactive Applications''
+``Automatic Annotation of Musical Audio for Interactive Applications,''
 {\it Ph.D. Thesis, Queen Mary University of London, UK}, 2007.
 
 \bibitem {08}
-Pedregosa et al.
-``Scikit-learn: Machine Learning in Python''
-{\it JMLR 12}, pages. 2825-2830, 2011.
+F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, and J. Vanderplas.
+``Scikit-learn: Machine Learning in Python,''
+{\it Journal of Machine Learning Research 12}, pages 2825-2830, 2011.
+
+\bibitem {09}
+Stepanov, Alexei. ``On the Kendall Correlation Coefficient," arXiv preprint arXiv:1507.01427, 2015.
+
 
 
 \end{thebibliography}
