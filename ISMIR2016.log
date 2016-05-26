@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.3.8)  25 MAY 2016 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.3.8)  26 MAY 2016 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,46 +246,47 @@ Underfull \hbox (badness 3407) in paragraph at lines 43--44
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
-<figs/sound_list.png, id=2, 1859.94875pt x 805.0075pt>
-File: figs/sound_list.png Graphic file (type png)
-
-<use figs/sound_list.png>
-Package pdftex.def Info: figs/sound_list.png used on input line 55.
-(pdftex.def)             Requested size: 233.31259pt x 100.96962pt.
+<figs/big_sidebar.png, id=2, 1092.08pt x 903.375pt>
+File: figs/big_sidebar.png Graphic file (type png)
+ <use figs/big_sidebar.png>
+Package pdftex.def Info: figs/big_sidebar.png used on input line 55.
+(pdftex.def)             Requested size: 233.31259pt x 192.99503pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \vbox (badness 2698) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
- <./figs/cc_by.pdf> <./figs/sound_list.png>] <figs/upload.png, id=20, 907.39pt 
-x 999.735pt>
+ <./figs/cc_by.pdf>]
+<figs/upload.png, id=21, 925.95938pt x 825.58438pt>
 File: figs/upload.png Graphic file (type png)
  <use figs/upload.png>
 Package pdftex.def Info: figs/upload.png used on input line 66.
-(pdftex.def)             Requested size: 233.31259pt x 257.05708pt.
+(pdftex.def)             Requested size: 233.31259pt x 208.02065pt.
 
 Underfull \hbox (badness 1286) in paragraph at lines 72--73
 \OT1/ptm/m/n/10 The main data stored in good-sounds.org con-sists of
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-<figs/segmentation.png, id=21, 1127.21124pt x 849.1725pt>
+
+<figs/segmentation.png, id=22, 1027.33812pt x 593.71812pt>
 File: figs/segmentation.png Graphic file (type png)
 
 <use figs/segmentation.png>
 Package pdftex.def Info: figs/segmentation.png used on input line 80.
-(pdftex.def)             Requested size: 233.31259pt x 175.75298pt.
- [2 <./figs/upload.png> <./figs/segmentation.png>]
+(pdftex.def)             Requested size: 233.31259pt x 134.83101pt.
+ [2 <./figs/big_sidebar.png> <./figs/upload.png> <./figs/segmentation.png>]
 Overfull \hbox (12.37764pt too wide) in paragraph at lines 90--96
  [][] 
  []
@@ -301,14 +302,14 @@ Missing character: There is no ™ in font ptmr7t!
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 222.
 
-[4] <figs/distribution_1.png, id=36, 578.16pt x 397.485pt>
+[4] <figs/distribution_1.png, id=40, 578.16pt x 397.485pt>
 File: figs/distribution_1.png Graphic file (type png)
 
 <use figs/distribution_1.png>
 Package pdftex.def Info: figs/distribution_1.png used on input line 243.
 (pdftex.def)             Requested size: 233.31259pt x 160.39828pt.
 
-<figs/distribution_2.png, id=38, 578.16pt x 397.485pt>
+<figs/distribution_2.png, id=41, 578.16pt x 397.485pt>
 File: figs/distribution_2.png Graphic file (type png)
 
 <use figs/distribution_2.png>
@@ -337,7 +338,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  2412 strings out of 494977
- 32206 string characters out of 6180184
+ 32211 string characters out of 6180184
  97832 words of memory out of 5000000
  5586 multiletter control sequences out of 15000+600000
  26539 words of font info for 54 fonts, out of 8000000 for 9000
@@ -355,9 +356,9 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on ISMIR2016.pdf (6 pages, 444992 bytes).
+Output written on ISMIR2016.pdf (6 pages, 1240728 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
